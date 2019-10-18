@@ -1,8 +1,8 @@
 const express = require('express');
 const router  = express.Router();
 
-const usersController = require('./users.js');
-
-router.use('/users', usersController);
+router.get('/', (req, res) => {
+  res.json({ msg: 'Welcome to users api' });
+});
 
 module.exports = router;
