@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "climater",
   "version": "1.0.0",
-  "description": "",
+  "description": "App that keeps track of your carbon footprint",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
