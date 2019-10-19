@@ -24,10 +24,6 @@
   align-content: center;
 }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 /*
   .bg-image {
     background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&dpr=2&auto=format&fit=crop&w=416&h=312&q=60');
@@ -42,13 +38,8 @@ section {
     width: 100%;
     height: 100%;
     color: #fff;
-<<<<<<< Updated upstream
-    background: linear-gradient(-45deg,  #FF944D, #EE7752, #E73C7E, #23A6D5,);
-    background-size: 400%, 400%;
-=======
     background: linear-gradient(-45deg,  #2e9e05, #e2ed05, #EE7752, #E73C7E, #fff, #000);
     background-size: 100%, 100%;
->>>>>>> Stashed changes
     position: relative;
     animation: animate 10s ease-in-out infinite;
     padding: 100%;
@@ -71,18 +62,8 @@ section {
     border-radius: 2rem;
   }
 
-<<<<<<< Updated upstream
-.login-Logo {
-  margin-left: 37%;
-=======
-#login-Logo {
-  margin-left: 27%;
->>>>>>> Stashed changes
-}
-
   .form-label-group {
     position: relative;
-    margin-bottom: 1rem;
   }
 
   .form-label-group>input,
