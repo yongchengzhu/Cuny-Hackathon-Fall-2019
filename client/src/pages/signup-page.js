@@ -48,7 +48,7 @@ export default class CreateUser extends Component {
             <div className="row">
               <div className="col-md-9 col-lg-8 mx-auto">
               
-              <img className="sign-Up-Logo align-items-center text-Label" src={logo} width="250px" height="250px" alt="Climater Logo"/>
+              <img id="sign-Up-Logo" src={logo} width="250px" height="250px" alt="Climater Logo"/>
                 
                 <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
                 <form id="signupform">

@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import { Redirect } from 'react-router';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import './css/App.css';
 import './css/sidebar.css';
 import aboutUsPage from './pages/about-us-page';
