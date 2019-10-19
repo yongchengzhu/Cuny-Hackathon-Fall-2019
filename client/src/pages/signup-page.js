@@ -62,7 +62,7 @@ export default class CreateUser extends Component {
 
                     <label htmlFor="inputFuelEconomy">Fuel Economy</label>
                     <div className="form-label-group">
-                        <input name="fueleconomy" type="fueleconomy" id="inputFuelEconomy" className="form-control" required/> 
+                        <input name="milespergallon" type="number" id="inputFuelEconomy" className="form-control" required/> 
                     </div>
 
                     <label htmlFor="inputPhoneNumber">Phone number</label>
@@ -77,7 +77,7 @@ export default class CreateUser extends Component {
                     >
                         Register
                     </button>
-                    <a className="d-block text-center mt-3 medium" href="/">Already have an account?</a>
+                    <a className="d-block text-center mt-3 medium" href="/login">Already have an account?</a>
                 </form>
             </div>
             )
