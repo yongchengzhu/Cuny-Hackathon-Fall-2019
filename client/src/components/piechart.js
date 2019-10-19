@@ -68,7 +68,7 @@ const Pie = props => {
   );
 
   return (
-    <svg width={props.width} height={props.height}>
+    <svg className="piechart" width={props.width} height={props.height}>
       <g
         ref={ref}
         transform={`translate(${props.outerRadius} ${props.outerRadius})`}

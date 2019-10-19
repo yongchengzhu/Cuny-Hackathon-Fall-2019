@@ -68,7 +68,7 @@ const Bar = props => {
     .domain([0, d3.max(data, d => d.value)]);
 
   return (
-    <>
+    <div className="bargraph">
       <svg width={props.width} height={props.height}>
         <XAxis
           scale={x}
@@ -98,7 +98,7 @@ const Bar = props => {
           ))}
         </g>
       </svg>
-    </>
+    </div>
   );
 };
 
