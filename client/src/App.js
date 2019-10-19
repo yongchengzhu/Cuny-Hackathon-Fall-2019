@@ -12,7 +12,7 @@ import './css/App.css';
 
 import loginPage from './pages/login-page';
 import signUpPage from './pages/signup-page';
-import aboutUsPage from './pages/about-us.page'
+import aboutUsPage from './pages/about-us-page'
 import dashboard from './pages/dashboard-page';
 import groups from './pages/groups-page';
 import howto from './pages/howto-page';
