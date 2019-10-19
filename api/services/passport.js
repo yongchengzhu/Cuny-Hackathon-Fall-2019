@@ -9,7 +9,7 @@ const User = require('../models/').User;
 // JWT Strategy
 // -----------------------------------------------------------------------------------------
 const jwtOptions = {
-  jwtFromRequest: ExtractJwt.fromHeader('Authorization'),
+  jwtFromRequest: ExtractJwt.fromHeader('authorization'),
   secretOrKey: process.env.JWT_SECRET 
 };
 
