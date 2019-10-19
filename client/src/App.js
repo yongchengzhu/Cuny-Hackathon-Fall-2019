@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css"
+import './css/sidebar.css';
+import './css/App.css';
+
+
+import SideBar from './components/sidebar-component';
+
+
+
+import loginPage from './pages/login-page';
+import signUpPage from './pages/signup-page';
+import aboutUsPage from './pages/about-us-page';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <SideBar />
+
+      <Router>
+          <Route path="/login" exact component={loginPage}/>
+          <Route path="/signup" exact component={signUpPage}/>
+          <Route path="/dashboard" exact component={aboutUsPage}/>
+          {/* <Route path="/groups" exact component={}/> */}
+          {/* <Route path="/howto" exact component={}/> */}
+      </Router>
     </div>
   );
 }
