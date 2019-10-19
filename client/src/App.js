@@ -1,22 +1,29 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import './css/App.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Redirect } from 'react-router';
+
+import "bootstrap/dist/css/bootstrap.min.css"
 import './css/sidebar.css';
-import aboutUsPage from './pages/about-us-page';
+import './css/App.css';
+
+
+
+
+import loginPage from './pages/login-page';
+import signUpPage from './pages/signup-page';
 import dashboard from './pages/dashboard-page';
 import groups from './pages/groups-page';
 import howto from './pages/howto-page';
-import loginPage from './pages/login-page';
-import signUpPage from './pages/signup-page';
+
 
 function App() {
   return (
     <div>
-      
+
       {/* <Bargraph
         data={[{index: 0, date: 0, value: 15},
-               {index: 1, date: 1, value: 45}, 
+               {index: 1, date: 1, value: 45},
                {index: 2, date: 2, value: 25}]}
         width={300}
         height={200}
@@ -36,13 +43,21 @@ function App() {
       /> */}
 
       <Router>
-          <Route path="/login" exact component={loginPage}/>
-          <Route path="/signup" exact component={signUpPage}/>
-          <Route path="/dashboard" exact component={dashboard} /> 
-          <Route path="/groups" exact component={groups}/>
-          <Route path="/howto" exact component={howto}/>
-          <Route path="/about" exact component={aboutUsPage}/>
+        <Switch>
+            <Route exact path="/">
+              { <Redirect to = "/login" /> }
+            </Route>
 
+            {/* Redirect to /login Page ...  */}
+
+              <Route path="/login" component={loginPage}/>
+              <Route path="/signup" component={signUpPage}/>
+              <Route path="/dashboard" component={dashboard} />
+              <Route path="/groups" component={groups}/>
+              <Route path="/howto" component={howto}/>
+              <Route path="/about" component={aboutUsPage}/>
+
+        </Switch>
       </Router>
     </div>
   );

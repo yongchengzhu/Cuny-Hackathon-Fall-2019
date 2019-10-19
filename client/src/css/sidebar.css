@@ -26,7 +26,8 @@
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 375px;
+    width: 375px;
+    font-size: 1.5rem;
 	}
 
 		#header .top {
