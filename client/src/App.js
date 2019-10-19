@@ -1,21 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { Redirect } from 'react-router';
-
-import "bootstrap/dist/css/bootstrap.min.css"
-import './css/sidebar.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './css/App.css';
-
-
-
-
-import loginPage from './pages/login-page';
-import signUpPage from './pages/signup-page';
-import aboutUsPage from './pages/about-us.page'
+import './css/sidebar.css';
+import aboutUsPage from './pages/about-us-page';
 import dashboard from './pages/dashboard-page';
 import groups from './pages/groups-page';
 import howto from './pages/howto-page';
+import loginPage from './pages/login-page';
+import signUpPage from './pages/signup-page';
 
 
 function App() {
