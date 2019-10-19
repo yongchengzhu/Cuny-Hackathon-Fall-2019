@@ -74,8 +74,6 @@ export default class CreateUser extends Component {
                     
                 </form>
             </div>
-                    
-
     )
   }
 }

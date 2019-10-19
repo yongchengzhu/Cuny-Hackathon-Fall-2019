@@ -5,11 +5,8 @@ import axios from 'axios';
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
-
     this.onSubmit = this.onSubmit.bind(this);
-
   }
-
 
   onSubmit(e) {
     e.preventDefault();
@@ -38,66 +35,51 @@ export default class CreateUser extends Component {
 
   render() {
     return (
-          <div className="row no-gutter ">
-           
-            <div className="col-md-8 col-lg-6">
-              <div className="login d-flex align-items-center py-5">
-                <div className="container-fluid">
-                <div className="row">
-                  <div className="col-md-9 col-lg-8 mx-auto">
-
-                    {/* There needs to be a Logo Here ... */}
-
-
-                    <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
-                    <form id="signupform">
-                      <label htmlFor="inputName" className="text-center" >User Name</label>
-                      <div className="form-label-group">
+            <div>              
+                {/* There needs to be a Logo Here ... */}
+                
+                <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
+                <form id="signupform">
+                    <label htmlFor="inputName" className="text-center" >User Name</label>
+                    <div className="form-label-group">
                         <input name="username" type="username" id="inputUsername" className="form-control" required autoFocus/>
-                      </div>
+                    </div>
 
-                      <label htmlFor="inputEmail"> Email address</label>
-                      <div className="form-label-group">
+                    <label htmlFor="inputEmail"> Email address</label>
+                    <div className="form-label-group">
                         <input name="email" type="email" id="inputEmail" className="form-control" required autoFocus/>
-                      </div>
+                    </div>
 
-                      <label htmlFor="inputPassword">Password</label>
-                      <div className="form-label-group">
+                    <label htmlFor="inputPassword">Password</label>
+                    <div className="form-label-group">
                         <input name="password" type="password" id="inputPassword" className="form-control" required/> 
-                      </div>
+                    </div>
 
-                      <label htmlFor="confirmPassword">Confirm Password</label>
-                      <div className="form-label-group"> 
+                    <label htmlFor="confirmPassword">Confirm Password</label>
+                    <div className="form-label-group"> 
                         <input type="password" id="ConfirmPassword" className="form-control" required/> 
-                      </div>
+                    </div>
 
-                      <label htmlFor="inputFuelEconomy">Fuel Economy</label>
-                      <div className="form-label-group">
+                    <label htmlFor="inputFuelEconomy">Fuel Economy</label>
+                    <div className="form-label-group">
                         <input name="fueleconomy" type="fueleconomy" id="inputFuelEconomy" className="form-control" required/> 
-                      </div>
+                    </div>
 
-                      <label htmlFor="inputPhoneNumber">Phone number</label>
-                      <div className="form-label-group">
+                    <label htmlFor="inputPhoneNumber">Phone number</label>
+                    <div className="form-label-group">
                         <input name="cellnumber" type="phoneNumber" id="inputPhoneNumber" className="form-control" required/> 
-                      </div>
+                    </div>
 
-                      <button 
+                    <button 
                         className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-3 mt-4" 
                         type="submit"
                         onClick = {e => this.onSubmit(e)}
-                      >
+                    >
                         Register
-                      </button>
-                      <a className="d-block text-center mt-3 medium" href="/">Already have an account?</a>
-                    </form>
-                  </div>
-                </div>
-              </div>
+                    </button>
+                    <a className="d-block text-center mt-3 medium" href="/">Already have an account?</a>
+                </form>
             </div>
-          </div>
-
-            
-        </div>
-    )
+            )
   }
 }
