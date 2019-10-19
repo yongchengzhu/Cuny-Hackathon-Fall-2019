@@ -2,8 +2,9 @@ const express       = require('express');
 const router        = express.Router();
 
 const middlewares = require('../middlewares');
-const User        = require('../models/user');
-const CarbonEntry = require('../models/carbonEntry');
+const models      = require('../models');
+const User        = models.User;
+const CarbonEntry = models.CarbonEntry;
 
 router.get('/', (req, res) => {
   // get info specific for user

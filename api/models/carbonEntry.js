@@ -1,12 +1,5 @@
 const mongoose = require('mongoose');
-
-const carbonEntrySchema = new mongoose.Schema({
-  category: String,
-  dateUsed: { type: Date, default: Date.now() },
-  fuelType: String,
-  milesPerGallon: Number,
-  footprint: Number
-});
+const carbonEntrySchema = require('./schemas').carbonEntrySchema;
 
 const CarbonEntry = mongoose.model('CarbonEntry', carbonEntrySchema);
 
