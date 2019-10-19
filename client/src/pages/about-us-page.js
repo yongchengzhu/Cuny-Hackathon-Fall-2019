@@ -27,43 +27,56 @@ export default class AboutUs extends Component {
   render() {
     return (
       <div>
-        <SideBar/>
-
         
-        {/* Header */}
-        <header className="bg-primary text-center py-5 mb-4">
-          <div className="container">
-            <h1 className="font-weight-light text-white">The Team</h1>
-          </div>
-        </header>
-        {/* Page Content */}
-        <div className="container">
+        {/* Page Content */}            
+        <div className="container-fluid">
           <div className="row">
-            
-            {/* Team Member 1 */}
-            <div className="col-xl-4 col-md-6 mb-4">
-              <div className="card border-0 shadow">
-                {/* <img src={Rifat} className="card-img-top" alt="..." /> */}
-                <div className="card-body text-center">
-                  <h5 className="card-title mb-0">Young</h5>
-                  <div className="card-text text-black-50">Built the backend and databases using the MERN stack</div>
+
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+              <SideBar/>
+            </div>
+          
+              <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                <div className="bg-primary text-center py-4 mb-4">
+                  <h1 className="font-weight-light text-white">The Team</h1>
                 </div>
               </div>
-            </div>
-            
-            {/* Team Member 2 */}
-            <div className="col-xl-4 col-md-6 mb-4">
-              <div className="card border-0 shadow">
-                {/* <img src={Oren} className="card-img-top" alt="..." /> */}
-                <div className="card-body text-center">
-                  <h5 className="card-title mb-0">Oren</h5>
-                  <div className="card-text text-black-50">Built the backend and databases using MERN Stack</div>
+
+              <div class="col-auto mr-5"> 
+              </div>
+
+              {/* Team Member 1 */}
+              <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4">
+                <div className="card border-0 shadow">
+                  {/* <img src={Rifat} className="card-img-top" alt="..." /> */}
+                  <div className="card-body text-center">
+                    <h5 className="card-title mb-0">Young</h5>
+                    <div className="card-text text-black-50">Built the backend and databases using the MERN stack</div>
+                  </div>
                 </div>
               </div>
+                
+              <div class="col-md-auto mr-5">
+              </div>
+
+              {/* Team Member 2 */}
+              <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4 ml-5">
+                <div className="card border-0 shadow">
+                  {/* <img src={Oren} className="card-img-top" alt="..." /> */}
+                  <div className="card-body text-center">
+                    <h5 className="card-title mb-0">Oren</h5>
+                    <div className="card-text text-black-50">Built the backend and databases using MERN Stack</div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
-            
+
+            <div class="col-md-auto mr-5">
+              </div>
+
             {/* Team Member 3 */}
-            <div className="col-xl-4 col-md-6 mb-4">
+            <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4">
               <div className="card border-0 shadow">
                 {/* <img src={Rehman} className="card-img-top" alt="..." /> */}
                 <div className="card-body text-center">
@@ -73,8 +86,13 @@ export default class AboutUs extends Component {
               </div>
             </div>
             
+            <div class="col-md-auto mr-5">
+            </div>
+            
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 mb-4">
+            </div>            
             {/* Team Member 4 */}
-            <div className="col-xl-4 col-md-6 mb-4">
+            <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4">
               <div className="card border-0 shadow">
                 {/* <img src={Rehman} className="card-img-top" alt="..." /> */}
                 <div className="card-body text-center">
@@ -84,7 +102,7 @@ export default class AboutUs extends Component {
               </div>
             </div>
 
-          </div>
+
           {/* /.row */}
         </div>
         {/* /.container */}
