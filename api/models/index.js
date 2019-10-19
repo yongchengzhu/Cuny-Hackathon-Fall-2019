@@ -12,4 +12,9 @@ mongoose.connection.once('open', () => {
   console.log('Mongodb installed succesfully');
 });
 
-module.exports = mongoose;
+module.exports = {
+  mongoose,
+  User : require('./user'),
+  Group : require('./group'),
+  CarbonEntry : require('./carbonEntry')
+};

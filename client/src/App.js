@@ -1,7 +1,12 @@
-import { default as React } from "react";
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Bargraph from './components/bargraph.js';
 import Piechart from './components/piechart';
+import SideBar from './components/sidebar-component';
+import './css/sidebar.css';
+import aboutUsPage from './pages/about-us-page';
+import loginPage from './pages/login-page';
+import signUpPage from './pages/signup-page';
 
 function App() {
   return (
@@ -26,6 +31,16 @@ function App() {
         innerRadius={60}
         outerRadius={100}
       />
+      
+      <SideBar />
+
+      <Router>
+          <Route path="/login" exact component={loginPage}/>
+          <Route path="/signup" exact component={signUpPage}/>
+          <Route path="/dashboard" exact component={aboutUsPage}/>
+          {/* <Route path="/groups" exact component={}/> */}
+          {/* <Route path="/howto" exact component={}/> */}
+      </Router>
     </div>
   );
 }
