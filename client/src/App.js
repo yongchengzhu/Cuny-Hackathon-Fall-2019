@@ -7,7 +7,7 @@ import './css/App.css';
 
 import loginPage from './pages/login-page';
 import signUpPage from './pages/signup-page';
-
+import aboutUsPage from './pages/about-us-page';
 
 
 
@@ -31,7 +31,7 @@ function App() {
     <Router>
         <Route path="/login" exact component={loginPage}/>
         <Route path="/signup" exact component={signUpPage}/>
-        {/* <Route path="/dashboard" exact component={}/> */}
+        <Route path="/dashboard" exact component={aboutUsPage}/>
         {/* <Route path="/groups" exact component={}/> */}
         {/* <Route path="/howto" exact component={}/> */}
     </Router>
