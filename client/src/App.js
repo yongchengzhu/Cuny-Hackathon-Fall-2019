@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Bargraph from './components/bargraph.js';
-import Piechart from './components/piechart';
 import './css/App.css';
 import './css/sidebar.css';
 import aboutUsPage from './pages/about-us-page';
@@ -15,7 +13,8 @@ import signUpPage from './pages/signup-page';
 function App() {
   return (
     <div>
-      <Bargraph
+      
+      {/* <Bargraph
         data={[{index: 0, date: 0, value: 15},
                {index: 1, date: 1, value: 45}, 
                {index: 2, date: 2, value: 25}]}
@@ -34,7 +33,8 @@ function App() {
         height={200}
         innerRadius={60}
         outerRadius={100}
-      />
+      /> */}
+
       <Router>
           <Route path="/login" exact component={loginPage}/>
           <Route path="/signup" exact component={signUpPage}/>
