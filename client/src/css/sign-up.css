@@ -1,56 +1,28 @@
+@import "https:fonts.googleapis.com/css?family=Lato:100";
+
 :root {
     --input-padding-x: 1.5rem;
     --input-padding-y: 0.75rem;
   }
 
-  html, body {margin: 0; height: 100%;}
+  html, body {
+    margin: 0;
+    max-width: 100%;
+    max-height: auto;
+    overflow: hidden;
+  }
+
   img {margin-bottom: 50px}
 
-  ::-webkit-scrollbar {
-      display: none;
-  }
-
-  .login,
-  .image {
-    min-height: 100vh;
-  }
-
-  #huntr-react-container{
-    display:none;
-    }
-
-.text-Label {
-  text-align: center;
-  align-content: center;
-}
-
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-/*
-  .bg-image {
-    background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&dpr=2&auto=format&fit=crop&w=416&h=312&q=60');
-    background-size: cover;
-    background-position: center;
-  }
-*/
-
-section {
-    display: block;
+  section {
     margin: auto;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-<<<<<<< Updated upstream
-    background: linear-gradient(-45deg,  #FF944D, #EE7752, #E73C7E, #23A6D5,);
-    background-size: 400%, 400%;
-=======
-    background: linear-gradient(-45deg,  #2e9e05, #e2ed05, #EE7752, #E73C7E, #fff, #000);
-    background-size: 100%, 100%;
->>>>>>> Stashed changes
+    width: auto;
+    height: auto;
+
+    background: linear-gradient(-45deg, #fff, #FF944D, #EE7752, #2af00c , #23A6D5, #000);
+    background-size: auto;
     position: relative;
-    animation: animate 10s ease-in-out infinite;
+    animation: animate 4s ease-in-out infinite;
     padding: 100%;
   }
 
@@ -60,9 +32,35 @@ section {
     100%{ background-position: 0 50%; }
   }
 
+
+  /* Fallback for Chrome
+  -------------------------------------------------- */
+
+  ::-webkit-scrollbar {
+    display: none;
+    width: 20%;
+    height: auto;
+  }
+
+  /*--------------------------------------------------*/
+  .login,
+  .image {
+    min-height: 100vh;
+  }
+
+
+  #huntr-react-container{
+    display:none;
+    }
+
+ 
   .login-heading {
     font-weight: 300;
   }
+
+.sign-Up-Logo {
+  margin-left: 27%;
+}
 
   .btn-login {
     font-size: 0.9rem;
@@ -71,18 +69,13 @@ section {
     border-radius: 2rem;
   }
 
-<<<<<<< Updated upstream
-.login-Logo {
-  margin-left: 37%;
-=======
-#login-Logo {
-  margin-left: 27%;
->>>>>>> Stashed changes
-}
-
   .form-label-group {
     position: relative;
     margin-bottom: 1rem;
+  }
+
+  .label-login-page {
+    text-align: center;
   }
 
   .form-label-group>input,
@@ -97,7 +90,7 @@ section {
     top: 0;
     left: 0;
     display: block;
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 0;
     /* Override default `<label>` margin */
     line-height: 1.5;
@@ -108,6 +101,12 @@ section {
     border-radius: .25rem;
     transition: all .1s ease-in-out;
   }
+
+.text-Label {
+  text-align: center;
+  align-content: center;
+}
+
 
   .form-label-group input::-webkit-input-placeholder {
     color: transparent;
@@ -140,6 +139,8 @@ section {
     font-size: 12px;
     color: #777;
   }
+
+
 
   /* Fallback for Edge
   -------------------------------------------------- */

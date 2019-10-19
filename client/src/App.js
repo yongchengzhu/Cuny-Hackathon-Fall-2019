@@ -1,8 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Redirect } from 'react-router';
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import './css/sidebar.css';
 import './css/App.css';
+
 
 
 
@@ -13,18 +16,27 @@ import groups from './pages/groups-page';
 import howto from './pages/howto-page';
 import aboutUsPage from './pages/about-us-page';
 
+
+
 function App() {
   return (
     <div>
-
       <Router>
-          <Route path="/login" exact component={loginPage}/>
-          <Route path="/signup" exact component={signUpPage}/>
-          <Route path="/dashboard" exact component={dashboard} /> 
-          <Route path="/groups" exact component={groups}/>
-          <Route path="/howto" exact component={howto}/>
-          <Route path="/about" exact component={aboutUsPage}/>
+        <Switch>
+            <Route exact path="/">
+              { <Redirect to = "/login" /> }   
+            </Route>
 
+            {/* Redirect to /login Page ...  */}
+
+              <Route path="/login" component={loginPage}/>
+              <Route path="/signup" component={signUpPage}/>
+              <Route path="/dashboard" component={dashboard} /> 
+              <Route path="/groups" component={groups}/>
+              <Route path="/howto" component={howto}/>
+              <Route path="/about" component={aboutUsPage}/>
+
+        </Switch>
       </Router>
     </div>
   );

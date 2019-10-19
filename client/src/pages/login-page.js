@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+<<<<<<< Updated upstream
 import "../css/login.css"
 // import logo from "../img/expirio.PNG"  // <----- I need to import a logo here later ... 
+=======
+import "../css/login.css";
+import logo from '../css/images/Logo.png';
+>>>>>>> Stashed changes
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -47,7 +52,11 @@ export default class CreateUser extends Component {
             <div className="row">
               <div className="col-md-9 col-lg-8 mx-auto">
                 
+<<<<<<< Updated upstream
                 {/* <img className="login-Logo" src={logo} width="150px" height="220px" alt="Expirio Logo"/> */}
+=======
+                <img id="login-Logo" src={logo} width="250px" height="250px" alt="Climater Logo"/>
+>>>>>>> Stashed changes
                 
                 <h3 className="login-heading mb-4 text-Label">Welcome back!</h3>
                 <form id="loginform">
