@@ -5,29 +5,26 @@ import './css/sidebar.css';
 import './css/App.css';
 
 
-import SideBar from './components/sidebar-component';
-
-
 
 import loginPage from './pages/login-page';
 import signUpPage from './pages/signup-page';
+import dashboard from './pages/dashboard-page';
+import groups from './pages/groups-page';
+import howto from './pages/howto-page';
 import aboutUsPage from './pages/about-us-page';
-
-
-
 
 function App() {
   return (
     <div>
-      
-      <SideBar />
 
       <Router>
           <Route path="/login" exact component={loginPage}/>
           <Route path="/signup" exact component={signUpPage}/>
-          <Route path="/dashboard" exact component={aboutUsPage}/>
-          {/* <Route path="/groups" exact component={}/> */}
-          {/* <Route path="/howto" exact component={}/> */}
+          <Route path="/dashboard" exact component={dashboard} /> 
+          <Route path="/groups" exact component={groups}/>
+          <Route path="/howto" exact component={howto}/>
+          <Route path="/about" exact component={aboutUsPage}/>
+
       </Router>
     </div>
   );

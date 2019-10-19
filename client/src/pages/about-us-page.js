@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import "../css/about-us.css"
+
+
+import "bootstrap/dist/css/bootstrap.min.css"
+import '../css/sidebar.css';
+import SideBar from '../components/sidebar-component';
+
+
+
+
+
+
 
 // import Oren from "../img/Oren_Senpai.jpg";
 // import Young from "../img/Young.PNG";
@@ -15,6 +27,9 @@ export default class AboutUs extends Component {
   render() {
     return (
       <div>
+        <SideBar/>
+
+        
         {/* Header */}
         <header className="bg-primary text-center py-5 mb-4">
           <div className="container">
@@ -30,8 +45,8 @@ export default class AboutUs extends Component {
               <div className="card border-0 shadow">
                 {/* <img src={Rifat} className="card-img-top" alt="..." /> */}
                 <div className="card-body text-center">
-                  <h5 className="card-title mb-0">Rifat</h5>
-                  <div className="card-text text-black-50">Designed the frontend with React and integrated Twilio API</div>
+                  <h5 className="card-title mb-0">Young</h5>
+                  <div className="card-text text-black-50">Built the backend and databases using the MERN stack</div>
                 </div>
               </div>
             </div>
@@ -63,7 +78,7 @@ export default class AboutUs extends Component {
               <div className="card border-0 shadow">
                 {/* <img src={Rehman} className="card-img-top" alt="..." /> */}
                 <div className="card-body text-center">
-                  <h5 className="card-title mb-0">Rehman</h5>
+                  <h5 className="card-title mb-0">Mohammed</h5>
                   <div className="card-text text-black-50">Designed the frontend with React and built routes using Express</div>
                 </div>
               </div>
