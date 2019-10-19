@@ -24,7 +24,6 @@ function Sidebar() {
                 <li><a href="/dashboard"><span>Personal Stats</span></a></li>
                 <li><a href="/groups"><span>Friends and Groups</span></a></li>
                 <li><a href="/howto"><span>How to Reduce your Carbon Footprint</span></a></li>
-                <li><a href="/about"><span>About us</span></a></li>
               </ul>
             </nav>
 
