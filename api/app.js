@@ -2,7 +2,7 @@ const methodOverride = require('method-override');
 const bodyParser     = require('body-parser');
 const express        = require('express');
 const app            = express();
-const db             = require('./models');
+const db             = require('./models').mongoose;
 
 //---------------------------------------------------------------------------------------
 // Middlewares

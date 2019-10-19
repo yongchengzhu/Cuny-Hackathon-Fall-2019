@@ -1,9 +1,5 @@
 const mongoose = require('mongoose');
-
-const groupSchema = new mongoose.Schema({
-  name: String,
-  users: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
-});
+const groupSchema = require('./schemas').groupSchema;
 
 const Group = mongoose.model('Group', groupSchema);
 
