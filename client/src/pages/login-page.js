@@ -74,10 +74,6 @@ export default class CreateUser extends Component {
                   </button>
                   
                   <div className="text-center">
-                    <a className="d-block text-center mt-3 medium" href="#">Forgot password?</a>
-                  </div>
-
-                  <div className="text-center">
                     <a className="d-block text-center mt-3 medium" href="/signup">Don't have an account?</a>
                   </div>
 

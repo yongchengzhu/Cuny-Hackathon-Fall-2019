@@ -22,7 +22,7 @@
     background: linear-gradient(-45deg, #fff, #FF944D, #EE7752, #2af00c , #23A6D5, #000);
     background-size: auto;
     position: relative;
-    animation: animate 4s ease-in-out infinite;
+    animation: animate 10s ease-in-out infinite;
     padding: 100%;
   }
 
@@ -58,7 +58,7 @@
     font-weight: 300;
   }
 
-.sign-Up-Logo {
+#sign-Up-Logo {
   margin-left: 27%;
 }
 
