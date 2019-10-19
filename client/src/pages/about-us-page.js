@@ -29,21 +29,27 @@ export default class AboutUs extends Component {
       <div>
         
         {/* Page Content */}            
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
 
             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3">
               <SideBar/>
             </div>
-          
-              <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+          {/* /.row */}
+          </div>
+          {/* /.container */}
+        </div>
+
+          <div className="container justify-content-end">
+            <div className="row">
+
+              <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div className="bg-primary text-center py-4 mb-4">
                   <h1 className="font-weight-light text-white">The Team</h1>
                 </div>
               </div>
 
-              <div class="col-auto mr-5"> 
-              </div>
+              
 
               {/* Team Member 1 */}
               <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4">
@@ -56,8 +62,7 @@ export default class AboutUs extends Component {
                 </div>
               </div>
                 
-              <div class="col-md-auto mr-5">
-              </div>
+              
 
               {/* Team Member 2 */}
               <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4 ml-5">
@@ -72,8 +77,7 @@ export default class AboutUs extends Component {
               
             </div>
 
-            <div class="col-md-auto mr-5">
-              </div>
+            
 
             {/* Team Member 3 */}
             <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4">
@@ -86,11 +90,10 @@ export default class AboutUs extends Component {
               </div>
             </div>
             
-            <div class="col-md-auto mr-5">
-            </div>
-            
+             
             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 mb-4">
-            </div>            
+            </div>
+
             {/* Team Member 4 */}
             <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 mb-4">
               <div className="card border-0 shadow">
@@ -102,11 +105,11 @@ export default class AboutUs extends Component {
               </div>
             </div>
 
-
-          {/* /.row */}
+          {/* /.row*/}
+          </div>
+        {/* /.container*/}
         </div>
-        {/* /.container */}
-      </div>
+
     );
   }
 }
