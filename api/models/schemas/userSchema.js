@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt   = require('bcrypt-nodejs');
-const groupSchema = require('./groupSchema');
+const carbonEntrySchema = require('./carbonEntrySchema');
 
 const userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   milesPerGallonDefault: Number,
   carbonLog: {
     total: Number,
-    history: [groupSchema]
+    history: [carbonEntrySchema]
   }
 });
 
