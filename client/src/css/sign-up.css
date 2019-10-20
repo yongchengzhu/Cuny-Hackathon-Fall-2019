@@ -14,16 +14,20 @@
 
   img {margin-bottom: 50px}
 
-
+  
 
   /* Fallback for Chrome
   -------------------------------------------------- */
 
-  ::-webkit-scrollbar {
-    display: none;
-    width: 20%;
-    height: auto;
+  .wrapper {
+    width: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    height: 750px;
   }
+
+  
 
   /*--------------------------------------------------*/
   .login,
