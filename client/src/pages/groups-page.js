@@ -9,6 +9,11 @@ import Piechart from '../components/piechart';
 export default class Groups extends Component {
   constructor(props) {
     super(props);
+
+    this.setState = {
+      
+    }
+
   }
 
 
