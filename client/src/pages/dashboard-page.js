@@ -1,23 +1,9 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from 'react';
-import axios from 'axios';
-
-import "bootstrap/dist/css/bootstrap.min.css"
-import '../css/sidebar.css';
-import SideBar from '../components/sidebar-component';
 import Bargraph from '../components/bargraph';
-import distance from "../service/distance"
-
-
-
-
-
-
-
-
-
-
-
-
+import SideBar from '../components/sidebar-component';
+import '../css/sidebar.css';
+import distance from "../service/distance";
 
 
 export default class Groups extends Component {
@@ -48,7 +34,6 @@ export default class Groups extends Component {
     return (
       <div>
         <SideBar/>
-
         <label className="label_Y">Carbon Emitted</label><br></br>
         <Bargraph
           data={[{index: 0, date: 1, value: 15},
