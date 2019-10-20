@@ -37,7 +37,7 @@ section {
     background-size: 400%, 400%;
     position: relative;
     animation: animate 10s ease-in-out infinite;
-    padding: 20%;
+    padding: 100%;
   }
 
   @keyframes animate {
