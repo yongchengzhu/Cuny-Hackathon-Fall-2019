@@ -40,12 +40,12 @@
     display:none;
     }
 
- 
+
   .login-heading {
     font-weight: 300;
   }
 
-.sign-Up-Logo {
+#sign-Up-Logo {
   margin-left: 27%;
 }
 

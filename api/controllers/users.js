@@ -6,6 +6,10 @@ const models      = require('../models');
 const User        = models.User;
 const CarbonEntry = models.CarbonEntry;
 
+router.get('/welcome', (req, res) => {
+  res.json({ msg: 'Welcome!' });
+});
+
 router.get('/', middlewares.requireToken, (req, res) => {
   res.json(req.user);
 });

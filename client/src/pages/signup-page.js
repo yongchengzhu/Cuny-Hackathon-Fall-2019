@@ -5,37 +5,10 @@ import '../css/sign-up.css';
 
 import logo from '../css/images/Logo.png';
 
-
-
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  onSubmit(e) {
-    e.preventDefault();
-
-    const myForm = document.getElementById("signupform");
-    let formData = new FormData(myForm);
-
-    let user = {};
-    for (let key of formData.keys()){
-      user[key] = formData.get(key);
-    }
-
-    console.log(user);
-
-    axios.post('http://localhost:5000/user/signup', user)
-    .then(res => {
-      if(res.status >= 400){
-        console.log(res.data);
-      } else {
-        localStorage.setItem("token", res.data.token);
-        window.location = '/dashboard';
-      }
-    })
-    .catch(err => console.log(err));
+    this.state = { email: '', password: '', cpassword: '', mobile: '', milesPerGallon: 0 }
   }
 
   render() {
@@ -106,5 +79,14 @@ export default class CreateUser extends Component {
       
   </div>
             )
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.signup(this.state);
   }
 }
