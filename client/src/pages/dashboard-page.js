@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from 'react';
 
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -41,7 +42,6 @@ export default class Groups extends Component {
     return (
       <div>
         <SideBar/>
-
         <label className="label_Y">Carbon Emitted</label><br></br>
         <Bargraph
           data={this.state.data}
