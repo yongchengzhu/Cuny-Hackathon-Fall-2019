@@ -19,10 +19,11 @@
   /* Fallback for Chrome
   -------------------------------------------------- */
 
-  ::-webkit-scrollbar {
-    display: none;
-    width: 20%;
-    height: auto;
+  .wrapper {
+    width: 650px;
+    overflow-y: scroll;
+    position: relative;
+    height: 750px;
   }
 
   /*--------------------------------------------------*/
