@@ -52,7 +52,7 @@ export default class CreateUser extends Component {
                   
                   <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
                   <form id="signupform">
-                    <label htmlFor="inputName" className="text-center" >User Name</label>
+                    <label htmlFor="inputName" className="text-center" >Full Name</label>
                     <div className="form-label-group">
                       <input name="username" type="username" id="inputUsername" className="form-control" required autoFocus/>
                     </div>

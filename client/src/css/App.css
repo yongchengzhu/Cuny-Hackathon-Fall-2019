@@ -40,3 +40,11 @@
   transform: translate(450px, 250px);
   
 }
+
+.dashboard_Button {
+  margin-left: 550px;
+}
+
+.dashboard_Input_Feilds {
+  margin-left: 10%;
+}
