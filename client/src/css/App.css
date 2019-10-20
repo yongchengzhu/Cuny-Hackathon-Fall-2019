@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282C34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,4 +39,12 @@
 .label_Y {
   transform: translate(450px, 250px);
   
+}
+
+.dashboard_Button {
+  margin-left: 550px;
+}
+
+.dashboard_Input_Feilds {
+  margin-left: 10%;
 }

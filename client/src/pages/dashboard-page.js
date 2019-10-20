@@ -6,7 +6,21 @@ import '../css/sidebar.css';
 import SideBar from '../components/sidebar-component';
 import Bargraph from '../components/bargraph';
 
-export default class AboutUs extends Component {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default class Groups extends Component {
   constructor(props) {
     super(props);
   }
@@ -31,10 +45,22 @@ export default class AboutUs extends Component {
 
         <label className="label_X">Week</label><br></br>
 
-        <label className="label_Info">Number of Miles driven: </label><br></br>
-        <label className="label_Info">Gallons of gas used: </label><br></br>
-        <label className="label_Info">Total emitted Carbon-Dioxide: </label><br></br>
+        <label className="label_Info">Number of Miles driven:</label>
+        
+        <input type="text" /><br></br>
+        
 
+        <label className="label_Info">Gallons of gas used: </label>
+        
+        <input type="text" className="ml-5" /><br></br>
+        
+
+        <label className="label_Info">Total emitted Carbon-Dioxide: </label>
+        
+        <input type="text" className="ml-5"/><br></br>
+        
+
+        <button type="submit" className="dashboard_Button">Add More Data</button>
 
       </div>
       );

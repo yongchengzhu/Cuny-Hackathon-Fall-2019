@@ -12,10 +12,8 @@ import LoginPage from './pages/login-page';
 import SignUpPage from './pages/signup-page';
 import SignOutPage from './pages/signout-page';
 import history from './history';
-
 import server from './apis/server';
 import Axios from "axios";
-
 
 class App extends React.Component {
   constructor(props) {
