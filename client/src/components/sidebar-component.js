@@ -27,6 +27,12 @@ function Sidebar() {
               </ul>
             </nav>
 
+            <footer id="footer">
+              <ul>
+                <a href="/login"><span>Log out</span></a>
+              </ul>
+            </footer>
+
           </div>
   
 

@@ -132,3 +132,15 @@
   #nav ul li a {
     padding: 0.5em 1.25em 0.5em 1.25em;
   }
+
+#nav ul li a:hover {
+    color: #fff;
+  }
+  
+a:hover {
+  color:#fff;
+}
+
+#footer {
+  transform: translate(-60px, 500px);
+}
