@@ -19,7 +19,7 @@ export default class CreateUser extends Component {
             <div className="row">
               <div className="col-md-9 col-lg-8 mx-auto">
                 <img id="login-Logo" src={logo} width="250px" height="250px" alt="Climater Logo"/>
-                
+
                 <h3 className="login-heading mb-4 text-Label">Welcome back!</h3>
                 {this.props.err}
                 <form id="loginform">
@@ -36,18 +36,15 @@ export default class CreateUser extends Component {
                     <input type="checkbox" className="custom-control-input" id="customCheck1"/>
                     <label className="custom-control-label" htmlFor="customCheck1">Remember password</label>
                   </div>
-                  
-                  <button 
-                    className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" 
+
+                  <button
+                    className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
                     type="submit"
                     onClick = {this.handleSubmit}
                   >
                     Sign in
                   </button>
-                  
-                  <div className="text-center">
-                    <a className="d-block text-center mt-3 medium" href="#">Forgot password?</a>
-                  </div>
+
 
                   <div className="text-center">
                     <a className="d-block text-center mt-3 medium" href="/signup">Don't have an account?</a>
@@ -56,7 +53,7 @@ export default class CreateUser extends Component {
                   <div className="text-center">
                     <a className="d-block text-center mt-3 medium" href="/about">About us</a>
                   </div>
-                    
+
                 </form>
               </div>
             </div>
@@ -68,7 +65,7 @@ export default class CreateUser extends Component {
         <section>
 
         </section>
-      </div>        
+      </div>
 
     </div>
     )

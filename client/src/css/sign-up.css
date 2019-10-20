@@ -14,23 +14,6 @@
 
   img {margin-bottom: 50px}
 
-  section {
-    margin: auto;
-    width: auto;
-    height: auto;
-
-    background: linear-gradient(-45deg, #fff, #FF944D, #EE7752, #2af00c , #23A6D5, #000);
-    background-size: auto;
-    position: relative;
-    animation: animate 4s ease-in-out infinite;
-    padding: 100%;
-  }
-
-  @keyframes animate {
-    0%{ background-position: 0 50%; }
-    50%{ background-position: 100% 50%; }
-    100%{ background-position: 0 50%; }
-  }
 
 
   /* Fallback for Chrome
@@ -53,12 +36,12 @@
     display:none;
     }
 
- 
+
   .login-heading {
     font-weight: 300;
   }
 
-.sign-Up-Logo {
+#sign-Up-Logo {
   margin-left: 27%;
 }
 
