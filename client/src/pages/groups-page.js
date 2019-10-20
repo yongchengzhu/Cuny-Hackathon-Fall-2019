@@ -24,7 +24,7 @@ export default class Groups extends Component {
 
   render() {
     return (
-      <div className="pie_Chart">
+      <div>
         <SideBar/>
         <div>
         <Piechart

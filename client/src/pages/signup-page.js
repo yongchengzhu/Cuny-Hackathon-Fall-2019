@@ -20,9 +20,9 @@ export default class CreateUser extends Component {
               <div className="container-fluid">
               <div className="row">
                 <div className="col-md-9 col-lg-8 mx-auto">
-                
+
                 <img className="sign-Up-Logo align-items-center text-Label" src={logo} width="250px" height="250px" alt="Climater Logo"/>
-                  
+
                   <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
                   <form id="signupform">
                     <label htmlFor="inputName" className="text-center" >Full Name</label>
@@ -37,26 +37,26 @@ export default class CreateUser extends Component {
 
                     <label htmlFor="inputPassword">Password</label>
                     <div className="form-label-group">
-                      <input name="password" type="password" id="inputPassword" className="form-control" required/> 
+                      <input name="password" type="password" id="inputPassword" className="form-control" required/>
                     </div>
 
                     <label htmlFor="confirmPassword">Confirm Password</label>
-                    <div className="form-label-group"> 
-                      <input type="password" id="ConfirmPassword" className="form-control" required/> 
+                    <div className="form-label-group">
+                      <input type="password" id="ConfirmPassword" className="form-control" required/>
                     </div>
 
                     <label htmlFor="inputPhoneNumber">Phone number</label>
                     <div className="form-label-group">
-                      <input name="mobile" type="Number" id="inputMobile" className="form-control" required/> 
+                      <input name="mobile" type="Number" id="inputMobile" className="form-control" required/>
                     </div>
 
                     <label htmlFor="inputPhoneNumber">Fuel Economy</label>
                     <div className="form-label-group">
-                      <input name="milesPerGallon" type="Number" id="inputFuelEconomy" className="form-control" required/> 
+                      <input name="milesPerGallon" type="Number" id="inputFuelEconomy" className="form-control" required/>
                     </div>
 
-                    <button 
-                      className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" 
+                    <button
+                      className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
                       type="submit"
                       onClick = {e => this.onSubmit(e)}
                     >
@@ -70,13 +70,13 @@ export default class CreateUser extends Component {
           </div>
         </div>
       </div>
-      
-      
+
+
       <div className="d-none d-md-flex col-md-6 col-lg-6 col-sm-0">
         <section>
         </section>
       </div>
-      
+
   </div>
             )
   }
