@@ -19,16 +19,7 @@ export default class Howto extends Component {
         return (
             <div>
                 <SideBar/>
-    
-                <ul className="group_Items">
-                    <li>Stop Eating (or Eat Less) Meat </li>
-                    <li>Unplug Your Devices after charging</li>
-                    <li>Drive Less</li>
-                    <li>Stop buying into Fad Fashion</li>
-                    <li>Eat Local Organic Produce</li>
-                    <li>Plant a Garden</li>
-                    <li>Line-Dry Your Clothes</li>
-                </ul>
+
 
             </div>
         );
