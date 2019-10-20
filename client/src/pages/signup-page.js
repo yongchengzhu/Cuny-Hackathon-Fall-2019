@@ -5,43 +5,15 @@ import '../css/sign-up.css';
 
 import logo from '../css/images/Logo.png';
 
-
-
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  onSubmit(e) {
-    e.preventDefault();
-
-    const myForm = document.getElementById("signupform");
-    let formData = new FormData(myForm);
-
-    let user = {};
-    for (let key of formData.keys()){
-      user[key] = formData.get(key);
-    }
-
-    console.log(user);
-
-    axios.post('http://localhost:5000/user/signup', user)
-    .then(res => {
-      if(res.status >= 400){
-        console.log(res.data);
-      } else {
-        localStorage.setItem("token", res.data.token);
-        window.location = '/dashboard';
-      }
-    })
-    .catch(err => console.log(err));
+    this.state = { email: '', password: '', cpassword: '', mobile: '', milesPerGallon: 0 }
   }
 
   render() {
     return (
-      <div className="row no-gutter ">
-           
+      <div className="row no-gutter">
         <div className="col-md-8 col-lg-6">
           <div className="login d-flex align-items-center py-5">
             <div className="container-fluid">
@@ -52,40 +24,34 @@ export default class CreateUser extends Component {
                 
                 <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
                 <form id="signupform">
-                  <label htmlFor="inputName" className="text-center" >User Name</label>
-                  <div className="form-label-group">
-                    <input name="username" type="username" id="inputUsername" className="form-control" required autoFocus/>
-                  </div>
-
                   <label htmlFor="inputEmail"> Email address</label>
                   <div className="form-label-group">
-                    <input name="email" type="email" id="inputEmail" className="form-control" required autoFocus/>
+                    <input onChange={this.handleChange} name="email" type="email" id="inputEmail" className="form-control" required autoFocus/>
                   </div>
 
                   <label htmlFor="inputPassword">Password</label>
                   <div className="form-label-group">
-                    <input name="password" type="password" id="inputPassword" className="form-control" required/> 
+                    <input onChange={this.handleChange} name="password" type="password" id="inputPassword" className="form-control" required/> 
                   </div>
 
                   <label htmlFor="confirmPassword">Confirm Password</label>
                   <div className="form-label-group"> 
-                    <input type="password" id="ConfirmPassword" className="form-control" required/> 
+                    <input onChange={this.handleChange} name="cpassword" type="password" id="ConfirmPassword" className="form-control" required/> 
                   </div>
 
                   <label htmlFor="inputPhoneNumber">Phone number</label>
                   <div className="form-label-group">
-                    <input name="mobile" type="Number" id="inputMobile" className="form-control" required/> 
+                    <input onChange={this.handleChange} name="mobile" type="Number" id="inputMobile" className="form-control" required/> 
                   </div>
 
                   <label htmlFor="inputPhoneNumber">Fuel Economy</label>
                   <div className="form-label-group">
-                    <input name="milesPerGallon" type="Number" id="inputFuelEconomy" className="form-control" required/> 
+                    <input onChange={this.handleChange} name="milesPerGallon" type="Number" id="inputFuelEconomy" className="form-control" required/> 
                   </div>
 
                   <button 
                     className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" 
-                    type="submit"
-                    onClick = {e => this.onSubmit(e)}
+                    onClick = {this.handleSubmit}
                   >
                     Register
                   </button>
@@ -104,5 +70,14 @@ export default class CreateUser extends Component {
       
   </div>
             )
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.signup(this.state);
   }
 }
