@@ -48,3 +48,10 @@
 .dashboard_Input_Feilds {
   margin-left: 10%;
 }
+
+.group_Items {
+  margin-left: 550px;
+  margin-top: 300px; 
+  font-size: 30px;
+  color: #282C34;
+}

@@ -49,16 +49,13 @@ export default class Groups extends Component {
         
         <input type="text" /><br></br>
         
-
         <label className="label_Info">Gallons of gas used: </label>
         
         <input type="text" className="ml-5" /><br></br>
-        
 
         <label className="label_Info">Total emitted Carbon-Dioxide: </label>
         
         <input type="text" className="ml-5"/><br></br>
-        
 
         <button type="submit" className="dashboard_Button">Add More Data</button>
 
