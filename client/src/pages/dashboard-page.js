@@ -31,9 +31,11 @@ export default class AboutUs extends Component {
 
         <label className="label_X">Week</label><br></br>
 
-        <label>Number of Miles driven: </label><br></br>
-        <label>Gallons of gas used: </label><br></br>
-        <label>Total emitted Carbon-Dioxide: </label><br></br>
+        <label className="label_Info">Number of Miles driven: </label><br></br>
+        <label className="label_Info">Gallons of gas used: </label><br></br>
+        <label className="label_Info">Total emitted Carbon-Dioxide: </label><br></br>
+
+
       </div>
       );
   }
