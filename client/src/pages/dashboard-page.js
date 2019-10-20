@@ -72,14 +72,12 @@ export default class Groups extends Component {
         <label className="label_Info">Number of Miles driven:</label>
         <input type="number" value={this.state.milesDriven.toString()} readOnly /><br></br>
         
-
         <label className="label_Info">Gallons of gas used: </label>
         <input type="number" value={this.state.gallonsUsed.toString()} readOnly /><br></br>
-        
 
         <label className="label_Info">Total emitted Carbon-Dioxide: </label>
         <input type="number" value={this.state.footprint.toString()} readOnly /><br></br>
-        
+
         <button type="submit" className="dashboard_Button" onClick = {this.handleSubmit}>Add More Data</button>
 
       </div>
