@@ -5,7 +5,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import './css/App.css';
 import './css/sidebar.css';
 import aboutUsPage from './pages/about-us-page';
-import dashboard from './pages/dashboard-page';
+import Dashboard from './pages/dashboard-page';
 import groups from './pages/groups-page';
 import howto from './pages/howto-page';
 import LoginPage from './pages/login-page';
@@ -13,12 +13,15 @@ import SignUpPage from './pages/signup-page';
 import SignOutPage from './pages/signout-page';
 import history from './history';
 import server from './apis/server';
-import Axios from "axios";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {err: ''}
+    this.state = {err: '', user: {}}
+  }
+
+  componentDidMount() {
+    this.fetchUser();
   }
 
   render() {
@@ -31,7 +34,7 @@ class App extends React.Component {
               </Route>
               <Route path="/login" render={props => <LoginPage {...props} signin={this.signin} err={this.state.err} />}/>
               <Route path="/signup" render={props => <SignUpPage {...props} signup={this.signup} />}/>
-              <Route path="/dashboard" component={dashboard} />
+              <Route path="/dashboard" render={props => <Dashboard {...props} createCarbon={this.createCarbon} user={this.state.user} />} />
               <Route path="/groups" component={groups}/>
               <Route path="/howto" component={howto}/>
               <Route path="/about" component={aboutUsPage}/>
@@ -66,6 +69,17 @@ class App extends React.Component {
   signout = () => {
     localStorage.removeItem('token');
     history.push('/login');
+  }
+
+  createCarbon = async form => {
+    const res = await server.post('/users/carbonLog/create', form);
+    console.log(res);
+  }
+
+  fetchUser = async () => {
+    const res = await server.get('/users/');
+
+    this.setState({ user: res.data });
   }
 }
 

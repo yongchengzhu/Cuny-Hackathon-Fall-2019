@@ -13,14 +13,7 @@ export default class Groups extends Component {
     this.setState = {
       
     }
-
   }
-
-
-
-
-
-
 
   render() {
     return (
@@ -28,7 +21,7 @@ export default class Groups extends Component {
         <SideBar/>
         <div>
         <Piechart
-        data={[{index: 0, value: 40},
+        data={[{index: 0, value: 400},
                {index: 1, value: 80},
                {index:2 , value: 20}
               ]}

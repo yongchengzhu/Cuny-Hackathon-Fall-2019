@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const carbonEntrySchema = new mongoose.Schema({
   category: String,
-  dateUsed: { type: Date, default: Date.now() },
+  date: { type: Date, default: Date.now() },
   fuelType: String,
   milesPerGallon: Number,
-  footprint: Number // grams of CO2
+  value: Number // grams of CO2
 });
 
 module.exports = carbonEntrySchema;

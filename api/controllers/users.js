@@ -19,6 +19,7 @@ router.post('/signin', middlewares.requireLogin, (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
+  const fullname = req.body.fullname;
   const email = req.body.email;
   const password = req.body.password;
   const mobile = req.body.mobile;
@@ -29,6 +30,7 @@ router.post('/signup', (req, res) => {
     if (existingUser) return res.status(422).send({ error: 'Email is in use!' });
 
     const newUser = new User({
+      fullname             : fullname,
       email                : email,
       password             : password,
       mobile               : mobile,
@@ -54,22 +56,26 @@ router.put('/update', middlewares.requireToken, (req, res, next) => {
   })
 });
 
+router.get('/carbonLog/history', middlewares.requireToken, (req, res, next) => {
+  res.json(req.user.carbonLog.history);
+});
+
 router.post('/carbonLog/create', middlewares.requireToken, (req, res, done) => {
   const category = req.body.category;
   const fuelType = req.body.fuelType;
   const milesPerGallon = req.body.milesPerGallon;
   const distance = req.body.distance;
-  const footprint = distance / milesPerGallon * 8.887;
+  const value = req.body.footprint; //distance / milesPerGallon * 8.887;
 
   const newCarbonEntry = new CarbonEntry({
     category: category,
     fuelType: fuelType,
     milesPerGallon: milesPerGallon,
-    footprint: footprint
+    value: value
   });
 
   const newCarbonLog = {
-    total: req.user.carbonLog.total + footprint,
+    total: req.user.carbonLog.total + value,
     history: [...req.user._doc.carbonLog.history, newCarbonEntry]
   };
 
@@ -85,7 +91,7 @@ router.delete('/carbonlog/:id', middlewares.requireToken, (req, res, next) => {
   let deletedTotal = 0;
   
   const newCarbonEntry = req.user.carbonLog.history.filter(e => {
-    if (e._id == req.params.id) deletedTotal = e.footprint;
+    if (e._id == req.params.id) deletedTotal = e.value;
     return e._id != req.params.id
   });
   
@@ -104,12 +110,12 @@ router.put('/carbonLog/:id', middlewares.requireToken, (req, res, next) => {
   
   for (let key in newCarbonEntry) {
     if (newCarbonEntry[key]['_id'] == req.params.id) {
-      diff = newCarbonEntry[key]['footprint'] - (req.body.distance / req.body.milesPerGallon * 8.887);
+      diff = newCarbonEntry[key]['value'] - (req.body.distance / req.body.milesPerGallon * 8.887);
       newCarbonEntry[key] = {
         category: req.body.category,
         fuelType: req.body.fuelType,
         milesPerGallon: req.body.milesPerGallon,
-        footprint: req.body.distance / req.body.milesPerGallon * 8.887
+        value: req.body.distance / req.body.milesPerGallon * 8.887
       };
     }
   }

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import '../css/sidebar.css';
 
-
-
-
+import server from '../apis/server';
 
 function Sidebar() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => { fetchUser() }, [])
+
+  const fetchUser = async () => {
+    const res = await server.get('/users/');
+
+    setUser(res.data);
+  }
     return(
       <div>
         <div id="header">
@@ -14,9 +21,9 @@ function Sidebar() {
           <div className="top">
             
             <div id="logo">
+              { !user? null : <h1>{user.fullname}</h1> }
               {/* <span className=""><img src={profilePhoto} alt="" /></span> */}
-              <h1 id="title">Todd Howard</h1>
-              <p>Game Director</p>
+              <p>Member</p>
             </div>
   
             <nav id="nav">
