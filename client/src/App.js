@@ -1,51 +1,74 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Redirect } from 'react-router';
+import { Router, Route, Switch } from "react-router-dom";
 import './css/App.css';
 import './css/sidebar.css';
 import aboutUsPage from './pages/about-us-page';
 import dashboard from './pages/dashboard-page';
 import groups from './pages/groups-page';
 import howto from './pages/howto-page';
-import loginPage from './pages/login-page';
-import signUpPage from './pages/signup-page';
+import LoginPage from './pages/login-page';
+import SignUpPage from './pages/signup-page';
+import SignOutPage from './pages/signout-page';
+import history from './history';
 
-function App() {
-  return (
-    <div>
-      
-      {/* <Bargraph
-        data={[{index: 0, date: 0, value: 15},
-               {index: 1, date: 1, value: 45}, 
-               {index: 2, date: 2, value: 25}]}
-        width={300}
-        height={200}
-        top={20}
-        bottom={30}
-        left={30}
-        right={0}
-      />
-      <Piechart
-        data={[{index: 0, value: 40},
-               {index: 1, value: 80},
-              ]}
-        width={200}
-        height={200}
-        innerRadius={60}
-        outerRadius={100}
-      /> */}
+import server from './apis/server';
+import Axios from "axios";
 
-      <Router>
-          <Route path="/login" exact component={loginPage}/>
-          <Route path="/signup" exact component={signUpPage}/>
-          <Route path="/dashboard" exact component={dashboard} /> 
-          <Route path="/groups" exact component={groups}/>
-          <Route path="/howto" exact component={howto}/>
-          <Route path="/about" exact component={aboutUsPage}/>
 
-      </Router>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {err: ''}
+  }
+
+  render() {
+    return (
+      <div>
+        <Router history={history}>
+          <Switch>
+              <Route exact path="/">
+                { <Redirect to = "/login" /> }
+              </Route>
+              <Route path="/login" render={props => <LoginPage {...props} signin={this.signin} err={this.state.err} />}/>
+              <Route path="/signup" render={props => <SignUpPage {...props} signup={this.signup} />}/>
+              <Route path="/dashboard" component={dashboard} />
+              <Route path="/groups" component={groups}/>
+              <Route path="/howto" component={howto}/>
+              <Route path="/about" component={aboutUsPage}/>
+              <Route path="/signout" render={props => <SignOutPage {...props} signout={this.signout} /> }/>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
+
+  // -----------------------------------------------------------------------------
+  // API Calls
+  // -----------------------------------------------------------------------------
+  signup = async form => {
+    const res = await server.post('/users/signup', form);
+
+    localStorage.setItem('token', res.data.token);
+    history.push('/dashboard');
+  }
+
+  signin = async form => {
+    try {
+      const res = await server.post('/users/signin', form);
+      localStorage.setItem('token', res.data.token);
+      history.push('/dashboard');
+    } catch (e) {
+      if(!localStorage.getItem('token')) this.setState({ err: 'Invalid Credentials' });
+    }
+
+  }
+
+  signout = () => {
+    localStorage.removeItem('token');
+    history.push('/login');
+  }
 }
 
 export default App;

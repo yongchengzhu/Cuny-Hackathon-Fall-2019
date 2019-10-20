@@ -23,6 +23,19 @@ router.get('/:id', middlewares.requireToken, async (req, res, next) => {
   }
 });
 
+router.get('/', middlewares.requireToken, async (req, res, next) => {
+  // get all groups user is in
+  try{
+    const groups = await Group.find();
+    groups = groups.filter( group =>
+      group.users.filter(email => email === req.body.email).length > 0
+    );
+    return res.json(groups);
+  } catch (err) {
+      res.status(404).json({err: err.toString()});
+  }
+});
+
 
 router.post('/', middlewares.requireToken, async (req, res) => {
   // Create group
