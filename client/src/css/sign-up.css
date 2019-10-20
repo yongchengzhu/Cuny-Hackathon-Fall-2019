@@ -14,7 +14,7 @@
 
   img {margin-bottom: 50px}
 
-
+  
 
   /* Fallback for Chrome
   -------------------------------------------------- */
@@ -22,9 +22,12 @@
   .wrapper {
     width: 650px;
     overflow-y: scroll;
+    overflow-x: hidden;
     position: relative;
     height: 750px;
   }
+
+  
 
   /*--------------------------------------------------*/
   .login,
